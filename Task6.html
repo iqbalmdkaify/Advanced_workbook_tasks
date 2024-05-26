@@ -11,6 +11,8 @@
     rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
   <style>
+
+    /* Global styles */
     body {
       margin: 0;
       padding: 0;
@@ -69,9 +71,12 @@
 </head>
 
 <body>
+  <!-- Main container -->
   <div class="container">
     <div class="form-section">
       <h2 class="text-center mb-4">Order Form</h2>
+
+      <!-- Order form section -->
       <form id="orderForm">
         <div class="mb-3">
           <label for="keyboards" class="form-label">Keyboards</label>
@@ -110,6 +115,8 @@
         </div>
       </form>
     </div>
+
+    <!-- Receipt section -->
     <div class="receipt-section">
       <h2 class="text-center mb-4">Selected Components</h2>
       <div id="selectedComponents" class="receipt">
@@ -129,6 +136,7 @@
       <div class="text-center mt-4">
         <p class="total-price">Total Price: $0</p>
         
+        <!-- Confirmation message div and Order button -->
         <button type="button" class="btn btn-success" onclick="placeOrder()">Order</button>
         <div id="confirmationMessage" class="confirmation-message" style="display: none;"></div>
       </div>
@@ -136,6 +144,8 @@
   </div>
 
   <script>
+
+    // This function calcaulates the total price of the components
     function calculateTotal() {
       const keyboards = document.getElementById('keyboards');
       const monitors = document.getElementById('monitors');
@@ -167,8 +177,8 @@
               `;
     }
 
+    // This function displays the confirmation message
     function placeOrder() {
-      // Display confirmation message
       const confirmationMessage = document.getElementById('confirmationMessage');
       confirmationMessage.textContent = "Thank you for ordering!";
       confirmationMessage.style.display = "block";
