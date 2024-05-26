@@ -44,4 +44,5 @@ const tolerance = 0.0001; // Tolerance for convergence
 const maxIterations = 100; // Maximum number of iterations
 
 // Calling the bisection method to find the root
+console.log(`For a=${a}, b=${b}: `); // displaying the endpoint values
 bisectionMethod(a, b, tolerance, maxIterations);
